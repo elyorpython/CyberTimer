@@ -2,6 +2,7 @@ from PyQt6.QtCore import QSize
 from PyQt6.QtWidgets import QMainWindow
 from Server.MainMenu import MainMenu
 from Server.MainToolbar import MainToolbar
+from Server.MainTab import MainTab
 
 
 class MainWindow(QMainWindow):
@@ -38,4 +39,5 @@ class MainWindow(QMainWindow):
 
     # Create Main tab widget
     def __main_tab_widget(self):
-        pass
+        self.main_tab_widget = MainTab(parent=self)
+        self.setCentralWidget(self.main_tab_widget)
